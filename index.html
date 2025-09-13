@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edo's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="terminal-window">
+        <header class="terminal-header">
+            <div class="header-buttons">
+                <span class="button close"></span>
+                <span class="button minimize"></span>
+                <span class="button maximize"></span>
+            </div>
+            <p class="header-title">Muhammad Edo Raduputu Aprima -- 13523096</p>
+        </header>
+
+        <main id="terminal-body" class="terminal-body">
+
+            <section class="terminal-home">
+                <p class="line"><span class="prompt">edo@portfolio:~$</span> ls -a</p>
+                <div class="directory-list">
+                    <p class="line dir">drwxr-xr-x 2 user user 4096 Sep 11 12:15 <a href="#about">about/</a></p>
+                    <p class="line dir">drwxr-xr-x 2 user user 4096 Sep 11 12:15 <a href="#projects">projects/</a></p>
+                    <p class="line file">-rw-r--r-- 1 user user 8192 Sep 11 12:48 <a href="#experience">experience.log</a></p>
+                    <p class="line file">-rw-r--r-- 1 user user 1536 Sep 11 12:16 <a href="#skills">skills.json</a></p>
+                    <p class="line file">-rw-r--r-- 1 user user 1024 Sep 11 12:15 <a href="#social">social.txt</a></p>
+                    <p class="line file">-rw-r--r-- 1 user user 2048 Sep 11 12:15 <a href="#help">help.info</a></p>
+                </div>
+                 <p class="line home-prompt"><span class="prompt blinking-cursor">edo@portfolio:~$</span></p>
+            </section>
+
+            <section id="about" class="terminal-content">
+                <p class="line"><span class="prompt">edo@portfolio:~$</span> cd about/</p>
+                <p class="line">Hi Pips! I am Muhammad Edo Raduputu Aprima.</p>
+                <p class="line" style="animation-delay: 2s;">Currently a student at ITB, building my foundation in software engineering. I'm also exploring the intersections of AI and robotics, interested in how machines learn to perceive and act. Outside of engineering, I spend my time on the badminton court or with a camera in hand. Both teach me about strategy and perspective.</p>
+                <p class="line"><a href="#" class="back-link">cd ..</a></p>
+                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/about$</span></p>
+            </section>
+
+            <section id="projects" class="terminal-content">
+                <p class="line"><span class="prompt">edo@portfolio:~$</span> cd projects/</p>
+                <p class="line">Listing projects...</p>
+                <div class="directory-list">
+                    <p class="line file">-rw-r--r-- 1 user user 3000 Aug 2025 <a href="#project-1">3D-Catalog-Model-Viewer.app</a></p>
+                    <p class="line file">-rw-r--r-- 1 user user 4500 Jun 2025 <a href="#project-2">Applicant-Tracking-System.app</a></p>
+                    <p class="line file">-rw-r--r-- 1 user user 4500 May 2025 <a href="#project-3">Logistics-Management-System.app</a></p>
+                    <p class="line file">-rw-r--r-- 1 user user 4500 Apr 2025 <a href="#project-4">Little-Alchemy-2-Solver.app</a></p>
+                    <p class="line file">-rw-r--r-- 1 user user 4500 May 2025 <a href="#project-5">Audio-and-Image-Retrieval.app</a></p>
+                    <p class="line file">-rw-r--r-- 1 user user 4500 Nov 2024 <a href="#project-6">Renovation-Tracker.app</a></p>
+                </div>
+                <p class="line"><a href="#" class="back-link">cd ..</a></p>
+                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
+            </section>
+
+            <section id="project-1" class="terminal-content project-detail">
+                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> ./3D-Catalog-Model-Viewer.app</p>
+                <h1 class="line title">3D Catalog Model Viewer</h1>
+                <p class="line stack">PHP, ThreeJS, SQLite</p>
+                <p class="line">A web application built with PHP and Three.js to display a catalog of 3D models (.glb) with a some feature and interactive viewer.</p>
+                <p class="line"><a href="#projects" class="back-link">exit()</a></p>
+                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
+            </section>
+            
+            <section id="project-2" class="terminal-content project-detail">
+                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> ./Applicant-Tracking-System.app</p>
+                <h1 class="line title">Application Tracking System (ATS)</h1>
+                <p class="line stack">Python, Flet, Docker, MySQL</p>
+                <p class="line">A CV parsing engine in Python, implementing multiple algorithms for comprehensive analysis: KMP, Boyer-Moore, and Aho-Corasick for exact keyword matching, Levenshtein Distance for fuzzy matching, and Regex for structured information extraction.</p>
+                <p class="line"><a href="#projects" class="back-link">exit()</a></p>
+                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
+            </section>
+
+            <section id="project-3" class="terminal-content project-detail">
+                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> ./Logistics-Management-System.app</p>
+                <h1 class="line title">Logistics Management System</h1>
+                <p class="line stack">Java, JavaFX, SOLID, Design Patterns</p>
+                <p class="line">Logistics management desktop application, grounding the design in SOLID principles and key Design Patterns (Factory, Singleton, Repository, Adapter) to ensure a modular and scalable codebase.</p>
+                <p class="line"><a href="#projects" class="back-link">exit()</a></p>
+                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
+            </section>
+
+            <section id="project-4" class="terminal-content project-detail">
+                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> ./Little-Alchemy-2-Solver.app</p>
+                <h1 class="line title">Little Alchemy 2 Solver</h1>
+                <p class="line stack">Next.js, Go, Docker</p>
+                <p class="line">A full-stack solver application, featuring a Go (Golang) backend that models the game’s recipes as a graph and executes BFS/DFS algorithms to find solution paths.</p>
+                <p class="line"><a href="#projects" class="back-link">exit()</a></p>
+                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
+            </section>
+
+            <section id="project-5" class="terminal-content project-detail">
+                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> ./Audio-and-Image-Retrieval.app</p>
+                <h1 class="line title">Audio and Image Retrieval</h1>
+                <p class="line stack">Next.js, Python, Matplotlib</p>
+                <p class="line">A full-stack implementation of an audio and image retrieval system. The backend is built with Python and Flask, using Mido for MIDI processing and Pillow/SciPy for image analysis, all served via an API to a Next.js client.</p>
+                <p class="line"><a href="#projects" class="back-link">exit()</a></p>
+                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
+            </section>
+
+            <section id="project-6" class="terminal-content project-detail">
+                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> ./Renovation-Tracker.app.app</p>
+                <h1 class="line title">Renovation Tracker</h1>
+                <p class="line stack">Python, TKinter, MySQL</p>
+                <p class="line">A project management desktop tool built with Python to simplify the process of tracking tasks, budgets, and timelines for home renovation projects.</p>
+                <p class="line"><a href="#projects" class="back-link">exit()</a></p>
+                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
+            </section>
+
+            <section id="experience" class="terminal-content">
+                <p class="line"><span class="prompt">edo@portfolio:~$</span> cat experience.log</p>
+                
+                <div class="log-entry">
+                    <p class="log-date">[Mar 2025 - Present]</p>
+                    <p class="log-title">> Research Software Engineer Intern</p>
+                    <p class="log-organization">Nakayama de Labo</p>
+                    <p class="log-desc"> - Designed and built a full-stack web application for a 3D model catalog with an interactive viewer using PHP and Three.js.</p>
+                    <p class="log-desc"> - Implemented core features such as a CRUD annotation system , object hierarchy panel , animation controls , and runtime mesh optimization.</p>
+                </div>
+                
+                <div class="log-entry">
+                    <p class="log-date">[Jan 2025 - Present]</p>
+                    <p class="log-title">> Head of Programming Divison Dago Hoogeschool Team </p>
+                    <p class="log-organization">Unit Robotika ITB</p>
+                    <p class="log-desc"> - Led the development of a humanoid soccer robot using ROS 2, architecting its motion control, computer vision pipeline, and autonomous decision-making modules.</p>
+                </div>
+
+                <div class="log-entry">
+                    <p class="log-date">[Jan 2025 - Present]</p>
+                    <p class="log-title">> Staff of Career Development</p>
+                    <p class="log-organization">Himpunan Mahasiswa Informatika (HMIF) ITB</p>
+                    <p class="log-desc"> - Authored insightful career-focused articles on Medium by interviewing alumni, reaching an audience of 200+ readers.</p>
+                    <p class="log-desc"> - Designed career mentoring events to connect students with experienced professionals and alumni.</p>
+                    
+                </div>
+
+                <div class="log-entry">
+                    <p class="log-date">[Apr 2024 - Apr 2025]</p>
+                    <p class="log-title">> Staff of Intracampus</p>
+                    <p class="log-organization">Unit Bulutangkis ITB</p>
+                    <p class="log-desc"> - Organized comparative studies with other student organizations in ITB to benchmark best practices and foster collaboration.</p>
+                    <p class="log-desc"> - Successfully planned and executed the annual Open House event to promote the organization and manage the recruitment of new members.</p>
+                    
+                </div>
+
+                <div class="log-entry">
+                    <p class="log-date">[Oct 2024 - Dec 2024]</p>
+                    <p class="log-title">> Computational Lab Practical Assistant</p>
+                    <p class="log-organization">Comlabs-USDI ITB</p>
+                    <p class="log-desc"> - Assisted and assessed over 50+ students as practicum assisstant for Computational Thinking 2024-2025 course
+                    
+                </div>
+
+                <div class="log-entry">
+                    <p class="log-date">[May 2024 - Dec 2024]</p>
+                    <p class="log-title">> Staff of Internal Control Unit</p>
+                    <p class="log-organization">GAMAIS ITB</p>
+                    <p class="log-desc"> - Coordinated and executed a series of technical and non-technical training programs for all divisions to enhance organizational capabilities.</p>
+                    
+                </div>
+
+                <p class="line"><a href="#" class="back-link">cd ..</a></p>
+                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~$</span></p>
+            </section>
+
+            <section id="skills" class="terminal-content">
+                <p class="line"><span class="prompt">edo@portfolio:~$</span> cat skills.json</p>
+                <div class="skills-list ">
+                    <p class="skill-category">Languages:</p>
+                    <p class="skills">  - C/C++, Java, Python, Go, JavaScript/TypeScript, SQL, PHP</p>
+
+                    <p class="skill-category">Frontend:</p>
+                    <p class="skills">  -  Next.js, React, Three.js, JavaFX, Flet, Tailwind CSS, HTML/CSS</p>
+
+                    <p class="skill-category">Backend & Databases:</p>
+                    <p class="skills">  - Node.js, PHP, Flask, Go, MySQL, SQLite</p>
+
+                    <p class="skill-category">Other:</p>
+                    <p class="skills">  - Git, Docker, ROS, Solidworks, Figma</p>
+                </div>
+                <p class="line"><a href="#" class="back-link">cd ..</a></p>
+                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~$</span></p>
+            </section>
+
+            <section id="social" class="terminal-content">
+                <p class="line"><span class="prompt">edo@portfolio:~$</span> cat social.txt</p>
+                <p class="line">Connecting to social networks...</p>
+                <ul class="contact-list">
+                    <li>[LinkedIn] <a href="https://linkedin.com/in/muhammadedo" target="_blank">linkedin.com/in/muhammadedo</a></li>
+                    <li>[GitHub] <a href="https://github.com/poetoeee" target="_blank">github.com/poetoeee</a></li>
+                    <li>[Email] <a href="mailto:muhammadedo017@gmail.com">muhammadedo017@gmail.com</a></li>
+                </ul>
+                <p class="line"><a href="#" class="back-link">cd ..</a></p>
+                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~$</span></p>
+            </section>
+
+            <section id="help" class="terminal-content">
+                <p class="line"><span class="prompt">edo@portfolio:~$</span> cat help.info</p>
+                <p class="line">Available commands:</p>
+                <ul class="help-list">
+                    <li><a href="#about">about</a>    - Shows a brief introduction about me.</li>
+                    <li><a href="#projects">projects</a> - Lists my main projects.</li>
+                    <li><a href="#social">social</a>   - Displays my social media links.</li>
+                </ul>
+                 <p class="line"><a href="#" class="back-link">cd ..</a></p>
+                 <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~$</span></p>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
