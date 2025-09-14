@@ -33,7 +33,6 @@
                     <p class="line file">-rw-r--r-- 1 user user 8192 Sep 11 09:30 <a href="#experience">experience.log</a></p>
                     <p class="line file">-rw-r--r-- 1 user user 2048 Sep 11 08:55 <a href="#skills">skills.json</a></p>
                     <p class="line file">-rw-r--r-- 1 user user 1024 Sep 09 10:05 <a href="#social">social.txt</a></p>
-                    <p class="line file">-rwxr-xr-x 1 user user 1024 Sep 10 18:30 <a href="#neofetch">neofetch</a></p>
                     <p class="line file">-rw-r--r-- 1 user user 2048 Sep 09 10:00 <a href="#help">help.info</a></p>
                     <p class="line file">-rwxr-xr-x 1 user user 1024 Sep 12 09:30 <a href="#themes">themes.sh</a></p>
                 </div>
@@ -52,67 +51,223 @@
                 <p class="line"><span class="prompt">edo@portfolio:~$</span> cd projects/</p>
                 <p class="line">Listing projects...</p>
                 <div class="directory-list">
-                    <p class="line file">-rw-r--r-- 1 user user 3128 Aug 2025 <a href="#project-1">3D-Catalog-Model-Viewer.app</a></p>
-                    <p class="line file">-rw-r--r-- 1 user user 4820 Jun 2025 <a href="#project-2">Applicant-Tracking-System.app</a></p>
-                    <p class="line file">-rw-r--r-- 1 user user 4610 May 2025 <a href="#project-3">Logistics-Management-System.app</a></p>
-                    <p class="line file">-rw-r--r-- 1 user user 4250 Apr 2025 <a href="#project-4">Little-Alchemy-2-Solver.app</a></p>
-                    <p class="line file">-rw-r--r-- 1 user user 4780 Mar 2025 <a href="#project-5">Audio-and-Image-Retrieval.app</a></p>
-                    <p class="line file">-rw-r--r-- 1 user user 2950 Nov 2024 <a href="#project-6">Renovation-Tracker.app</a></p>
+                    <p class="line file">-rw-r--r-- 1 user user 3128 Aug 2025 <a href="#project-1">3D-Catalog-Model-Viewer.md</a></p>
+                    <p class="line file">-rw-r--r-- 1 user user 4820 Jun 2025 <a href="#project-2">Applicant-Tracking-System.md</a></p>
+                    <p class="line file">-rw-r--r-- 1 user user 4610 May 2025 <a href="#project-3">Logistics-Management-System.md</a></p>
+                    <p class="line file">-rw-r--r-- 1 user user 3240 May 2025 <a href="#project-4">Rush-Hour-Puzzle-Solver.md</a></p>
+                    <p class="line file">-rw-r--r-- 1 user user 4250 Apr 2025 <a href="#project-5">Little-Alchemy-2-Solver.md</a></p>
+                    <p class="line file">-rw-r--r-- 1 user user 4780 Dec 2024 <a href="#project-6">Audio-and-Image-Retrieval.md</a></p>
+                    <p class="line file">-rw-r--r-- 1 user user 2950 Nov 2024 <a href="#project-7">Renovation-Tracker.md</a></p>
                 </div>
                 <p class="line"><a href="#" class="back-link">cd ..</a></p>
                 <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
             </section>
 
             <section id="project-1" class="terminal-content project-detail">
-                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> ./3D-Catalog-Model-Viewer.app</p>
-                <h1 class="line title">3D Catalog Model Viewer</h1>
-                <p class="line stack">PHP, ThreeJS, SQLite</p>
-                <p class="line">A web application built with PHP and Three.js to display a catalog of 3D models (.glb) with a some feature and interactive viewer.</p>
+                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> cat ./3D-Catalog-Model-Viewer.md</p>
+                <div class="readme-content">
+                    <h2 class="readme-title">3D Catalog Model Viewer</h2>
+                    <p class="readme-desc">
+                        This project was built to address the need for an interactive and easy-to-use 3D model viewer and catalogs. It allows users to upload, view, and annotate models directly in the browser.
+                    </p>
+                    <h2 class="readme-subtitle">Key Features</h2>
+                    <ul class="readme-features">
+                        <li>Model catalog with auto thumbnail generation.</li>
+                        <li>Interactive controls: zoom, pan, and auto rotate.</li>
+                        <li>Working Tree as a hierarchical view of all object within 3D model.</li>
+                        <li>Toggle the visibility (hide/show) of each object.</li>
+                        <li>Complete annotation system with CRUD with drag and drob feature.</li>
+                        <li>Animation controls (play, pause, stop) for models with animations.</li>
+                        <li>Runtime mesh optimization for faster loading.</li>
+                    </ul>
+                    <h2 class="readme-subtitle">Tech Stack</h2>
+                    <div class="readme-tech-stack">
+                        <span class="tech-badge">PHP</span>
+                        <span class="tech-badge">Three.js</span>
+                        <span class="tech-badge">SQLite</span>
+                        <span class="tech-badge">JavaScript</span>
+                    </div>
+                    <h2 class="readme-subtitle">Links</h2>
+                    <div class="readme-links">
+                        <a href="https://github.com/itbdelaboprogramming/Mockup_Threejs_Php" target="_blank">[GitHub Repository]</a>
+                    </div>
+                </div>
+
                 <p class="line"><a href="#projects" class="back-link">exit()</a></p>
                 <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
             </section>
             
             <section id="project-2" class="terminal-content project-detail">
-                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> ./Applicant-Tracking-System.app</p>
-                <h1 class="line title">Application Tracking System (ATS)</h1>
-                <p class="line stack">Python, Flet, Docker, MySQL</p>
-                <p class="line">A CV parsing engine in Python, implementing multiple algorithms for comprehensive analysis: KMP, Boyer-Moore, and Aho-Corasick for exact keyword matching, Levenshtein Distance for fuzzy matching, and Regex for structured information extraction.</p>
+                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> cat ./Applicant-Tracking-System.md</p>
+                <div class="readme-content">
+                    <h2 class="readme-title">Application Tracking System (ATS)</h2>
+                    <p class="readme-desc">
+                        A CV parsing engine in Python, implementing multiple algorithms for comprehensive analysis: KMP, Boyer-Moore, and Aho-Corasick for exact keyword matching, Levenshtein Distance for fuzzy matching, and Regex for structured information extraction.
+                    </p>
+                    <h2 class="readme-subtitle">Key Features</h2>
+                    <ul class="readme-features">
+                        <li>Exact keyword matching with KMP, Boyer-Moore, Aho-Corasick.</li>
+                        <li>Fuzzy matching using Levenshtein Distance.</li>
+                        <li>Structured info extraction with Regex.</li>
+                    </ul>
+                    <h2 class="readme-subtitle">Tech Stack</h2>
+                    <div class="readme-tech-stack">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Flet</span>
+                        <span class="tech-badge">Docker</span>
+                        <span class="tech-badge">MySQL</span>
+                    </div>
+                    <h2 class="readme-subtitle">Links</h2>
+                    <div class="readme-links">
+                        <a href="https://github.com/Fariz36/Tubes3_10Internship0Job" target="_blank">[GitHub Repository]</a>
+                    </div>
+                </div>
                 <p class="line"><a href="#projects" class="back-link">exit()</a></p>
                 <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
             </section>
 
             <section id="project-3" class="terminal-content project-detail">
-                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> ./Logistics-Management-System.app</p>
-                <h1 class="line title">Logistics Management System</h1>
-                <p class="line stack">Java, JavaFX, SOLID, Design Patterns</p>
-                <p class="line">Logistics management desktop application, grounding the design in SOLID principles and key Design Patterns (Factory, Singleton, Repository, Adapter) to ensure a modular and scalable codebase.</p>
+                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> cat ./Logistics-Management-System.md</p>
+                <div class="readme-content">
+                    <h2 class="readme-title">Logistics Management System</h2>
+                    <p class="readme-desc">
+                        Logistics management application that allows delivery management and tracking of parcels by couriers. Grounding the design in SOLID principles and key Design Patterns (Factory, Singleton, Repository, Adapter) to ensure a modular and scalable codebase.
+                    </p>
+                    <h2 class="readme-subtitle">Key Features</h2>
+                    <ul class="readme-features">
+                        <li>Shipment management for courier.</li>
+                        <li>Courier management, shipment management, and parcell management for admin.</li>
+                        <li>Plugin that can be customized by user to display data analysis.</li>
+                        <li>CRUD for shipment, courier, and parcel management.</li>
+                    </ul>
+                    <h2 class="readme-subtitle">Tech Stack</h2>
+                    <div class="readme-tech-stack">
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">JavaFX</span>
+                        <span class="tech-badge">SOLID</span>
+                        <span class="tech-badge">Design Patterns</span>
+                    </div>
+                    <h2 class="readme-subtitle">Links</h2>
+                    <div class="readme-links">
+                        <a href="https://github.com/Labpro-21/if2010-tubes-2-2425-owo" target="_blank">[GitHub Repository]</a>
+                    </div>
+                </div>
                 <p class="line"><a href="#projects" class="back-link">exit()</a></p>
                 <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
             </section>
 
             <section id="project-4" class="terminal-content project-detail">
-                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> ./Little-Alchemy-2-Solver.app</p>
-                <h1 class="line title">Little Alchemy 2 Solver</h1>
-                <p class="line stack">Next.js, Go, Docker</p>
-                <p class="line">A full-stack solver application, featuring a Go (Golang) backend that models the game’s recipes as a graph and executes BFS/DFS algorithms to find solution paths.</p>
+                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> cat ./Rush-Hour-Puzzle-Solver.md</p>
+                <div class="readme-content">
+                    <h2 class="readme-title">Rush Hour Puzzle Solver</h2>
+                    <p class="readme-desc">
+                        This program, developed in Java using the Swing toolkit for the GUI, implements various pathfinding algorithms to solve the Rush Hour puzzle. The core challenge is to maneuver a primary vehicle out of a gridlocked board through a designated exit point in the minimum number of moves.
+                    </p>
+                    <h2 class="readme-subtitle">Key Features</h2>
+                    <ul class="readme-features">
+                        <li>Implements uninformed search (UCS, IDS) and informed search (A*, IDA*) algorithms.</li>
+                        <li>Allows user to select different search strategies and heuristic functions.</li>
+                        <li>Features multiple heuristics like "Blocking Pieces" and "Manhattan Distance".</li>
+                    </ul>
+                    <h2 class="readme-subtitle">Tech Stack</h2>
+                    <div class="readme-tech-stack">
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">Swing</span>
+                    </div>
+                    <h2 class="readme-subtitle">Links</h2>
+                    <div class="readme-links">
+                        <a href="https://github.com/poetoeee/Tucil3_13523096" target="_blank">[GitHub Repository]</a>
+                    </div>
+                </div>
                 <p class="line"><a href="#projects" class="back-link">exit()</a></p>
                 <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
             </section>
 
             <section id="project-5" class="terminal-content project-detail">
-                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> ./Audio-and-Image-Retrieval.app</p>
-                <h1 class="line title">Audio and Image Retrieval</h1>
-                <p class="line stack">Next.js, Python, Matplotlib</p>
-                <p class="line">A full-stack implementation of an audio and image retrieval system. The backend is built with Python and Flask, using Mido for MIDI processing and Pillow/SciPy for image analysis, all served via an API to a Next.js client.</p>
+                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> cat ./Little-Alchemy-2-Solver.md</p>
+                <div class="readme-content">
+                    <h2 class="readme-title">Little Alchemy 2 Solver</h2>
+                    <p class="readme-desc">
+                        A full-stack solver application, featuring a Go (Golang) backend that models the game’s recipes as a graph and executes BFS/DFS algorithms to find solution paths.
+                    </p>
+                    <h2 class="readme-subtitle">Key Features</h2>
+                    <ul class="readme-features">
+                        <li>Go backend with graph-based recipe modeling.</li>
+                        <li>Interactive Next.js frontend for user input (elements, amount recipes) and result display.</li>
+                        <li>Finds solutions using BFS/DFS algorithms.</li>
+                        <li>Full-stack architecture with a modern frontend.</li>
+                    </ul>
+                    <h2 class="readme-subtitle">Tech Stack</h2>
+                    <div class="readme-tech-stack">
+                        <span class="tech-badge">Next.js</span>
+                        <span class="tech-badge">Go</span>
+                        <span class="tech-badge">Docker</span>
+                    </div>
+                    <h2 class="readme-subtitle">Links</h2>
+                    <div class="readme-links">
+                        <a href="https://github.com/rafifrs/Tubes2_FE_SayMyName" target="_blank">[GitHub Repository (FE)]</a>
+                        <a href="https://github.com/Starath/Tubes2_BE_SayMyName" target="_blank">[GitHub Repository (BE)]</a>
+                    </div>
+                </div>
                 <p class="line"><a href="#projects" class="back-link">exit()</a></p>
                 <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
             </section>
 
             <section id="project-6" class="terminal-content project-detail">
-                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> ./Renovation-Tracker.app.app</p>
-                <h1 class="line title">Renovation Tracker</h1>
-                <p class="line stack">Python, TKinter, MySQL</p>
-                <p class="line">A project management desktop tool built with Python to simplify the process of tracking tasks, budgets, and timelines for home renovation projects.</p>
+                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> cat ./Audio-and-Image-Retrieval.md</p>
+                <div class="readme-content">
+                    <h2 class="readme-title">Audio and Image Retrieval</h2>
+                    <p class="readme-desc">
+                        A full-stack implementation of an audio and image retrieval system. The backend is built with Python and Flask, using Mido for MIDI processing and Pillow/SciPy for image analysis, all served via an API to a Next.js client.
+                    </p>
+                    <h2 class="readme-subtitle">Key Features</h2>
+                    <ul class="readme-features">
+                        <li>Users can input audio (MIDI) for audio retrieval system.</li>
+                        <li>Users can input image (png/jpg) for image retrieval system.</li>
+                        <li>Sorting output by similarity percentage.</li>
+                        <li>Uses Mido for MIDI and Pillow/SciPy for images.</li>
+                    </ul>
+                    <h2 class="readme-subtitle">Tech Stack</h2>
+                    <div class="readme-tech-stack">
+                        <span class="tech-badge">Next.js</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Matplotlib</span>
+                    </div>
+                    <h2 class="readme-subtitle">Links</h2>
+                    <div class="readme-links">
+                        <a href="https://github.com/poetoeee/Algeo02-23024" target="_blank">[GitHub Repository]</a>
+                    </div>
+                </div>
+                <p class="line"><a href="#projects" class="back-link">exit()</a></p>
+                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
+            </section>
+
+            <section id="project-7" class="terminal-content project-detail">
+                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> cat ./Renovation-Tracker.md</p>
+                <div class="readme-content">
+                    <h2 class="readme-title">Renovation Tracker</h2>
+                    <p class="readme-desc">
+                        A project management desktop tool built with Python to simplify the process of tracking tasks, budgets, and timelines for home renovation projects.
+                    </p>
+                    <h2 class="readme-subtitle">Key Features</h2>
+                    <ul class="readme-features">
+                        <li>Project management with sort and filter feature by project status percentage.</li>
+                        <li>Task management with sort and filter feature by project status percentage.</li>
+                        <li>Budgets management for every task and project.</li>
+                        <li>CRUD for project management, task management, and budget management.</li>
+                        <li>CRUD for project inspiration page.</li>
+                    </ul>
+                    <h2 class="readme-subtitle">Tech Stack</h2>
+                    <div class="readme-tech-stack">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">TKinter</span>
+                        <span class="tech-badge">MySQL</span>
+                    </div>
+                    <h2 class="readme-subtitle">Links</h2>
+                    <div class="readme-links">
+                        <a href="https://github.com/poetoeee/IF2150-2024-K02-G09-Rebuilt" target="_blank">[GitHub Repository]</a>
+                    </div>
+                </div>
                 <p class="line"><a href="#projects" class="back-link">exit()</a></p>
                 <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
             </section>
@@ -196,41 +351,11 @@
                 <p class="line"><span class="prompt">edo@portfolio:~$</span> cat social.txt</p>
                 <p class="line">Connecting to social networks...</p>
                 <ul class="contact-list">
-                    <li>[LinkedIn] <a href="https://linkedin.com/in/muhammadedo" target="_blank">linkedin.com/in/muhammadedo</a></li>
-                    <li>[GitHub] <a href="https://github.com/poetoeee" target="_blank">github.com/poetoeee</a></li>
-                    <li>[Email] <a href="mailto:muhammadedo017@gmail.com">muhammadedo017@gmail.com</a></li>
+                    <li>[LinkedIn]  <a href="https://linkedin.com/in/muhammadedo" target="_blank">linkedin.com/in/muhammadedo</a></li>
+                    <li>[GitHub]    <a href="https://github.com/poetoeee" target="_blank">github.com/poetoeee</a></li>
+                    <li>[Instagram] <a href="https://www.instagram.com/edoaprima/" target="_blank">instagram.com/edoaprima</a></li>
+                    <li>[Email]     <a href="mailto:muhammadedo017@gmail.com">muhammadedo017@gmail.com</a></li>
                 </ul>
-                <p class="line"><a href="#" class="back-link">cd ..</a></p>
-                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~$</span></p>
-            </section>
-
-            <section id="neofetch" class="terminal-content">
-                <p class="line"><span class="prompt">edo@portfolio:~$</span> neofetch</p>
-                <div class="neofetch-container">
-                    <pre class="neofetch-ascii">
-      eeeeeeeeeeee
-    eeeee      eeeee
-  eeee          eeee
- eeee            eeee
- eeee
- eeeeeeeeeeeeeeeeee
- eeeeeeeeeeeeeeeeee
- eeee
- eeee            eeee
-  eeee          eeee
-    eeeee      eeeee
-      eeeeeeeeeeee
-                    </pre>
-                    <div class="neofetch-info">
-                        <p><span class="info-label">edo</span>@<span class="info-label">portfolio</span></p>
-                        <p>-----------------</p>
-                        <p><span class="info-label">Host</span>: Muhammad Edo R. A.</p>
-                        <p><span class="info-label">Status</span>: Student at CS ITB</p>
-                        <p><span class="info-label">Shell</span>: zsh (emulated)</p>
-                        <p><span class="info-label">Core Skills</span>: C/C++, Python, Next.js, Java</p>
-                        <p><span class="info-label">Contact</span>: muhammadedo017@gmail.com</p>
-                    </div>
-                </div>
                 <p class="line"><a href="#" class="back-link">cd ..</a></p>
                 <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~$</span></p>
             </section>
@@ -244,7 +369,6 @@
                     <li><a href="#experience">experience</a> - Displays my professional and organizational experience.</li>
                     <li><a href="#skills">skills</a>     - Lists my technical skills and competencies.</li>
                     <li><a href="#social">social</a>     - Displays my social media and contact links.</li>
-                    <li><a href="#neofetch">neofetch</a>   - Shows a quick profile summary.</li>
                     <li><a href="#themes">themes</a>     - Allows you to change the color theme.</li>
                 </ul>
                  <p class="line"><a href="#" class="back-link">cd ..</a></p>

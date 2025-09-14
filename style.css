@@ -112,14 +112,43 @@ ul {list-style-type: none;}
 .log-organization {color: var(--green);}
 .log-desc {padding-left: 15px;}
 
-.neofetch-container {display: flex; align-items: flex-start; gap: 20px;}
-.neofetch-ascii {
-    color: var(--cyan); 
-    line-height: 1; 
-    margin: 0;
-    flex-shrink: 0; 
+.readme-content {margin-top: 15px;}
+.readme-title {
+    font-size: 1em; 
+    font-weight: bold;
+    color: var(--green);
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-.neofetch-info .info-label { color: var(--pink); }
+.readme-title::before {content: '# '; color: var(--gray);}
+.readme-subtitle {
+    font-size: 1em; 
+    font-weight: bold;
+    color: var(--green);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.readme-subtitle::before {content: '## '; color: var(--gray);}
+.readme-features {
+    list-style-type: none;
+    padding-left: 15px;
+}
+.readme-features li::before {
+    content: '- ';
+    color: var(--pink);
+    margin-right: 10px;
+}
+.tech-badge {
+    display: inline-block;
+    background-color: var(--gray);
+    color: var(--text-color); 
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.readme-links {margin-bottom: 10px;}
 
 /* --- CURSOR ANIMATION --- */
 .blinking-cursor::after {content: '█'; margin-left: 5px; color: var(--green);}
@@ -140,10 +169,6 @@ ul {list-style-type: none;}
         max-height: 100vh;
     }
     .terminal-window, .terminal-window h1 {font-size: 14px;}
-    
-    .neofetch-container {flex-direction: column; align-items: center; gap: 20px;}
-    .neofetch-ascii {text-align: center;}
-    .neofetch-info {text-align: center;}
 }
 
 /* --- THEME SWITCHER --- */
