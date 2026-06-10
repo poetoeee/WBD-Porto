@@ -296,7 +296,7 @@ body.light .tech-badge { color: var(--text); }
    SOCIAL
    ================================================================ */
 .social-row { display: flex; gap: 12px; line-height: 1.9; }
-.social-label { color: var(--gray); min-width: 88px; flex-shrink: 0; }
+.social-label { color: var(--gray); min-width: 100px; flex-shrink: 0; }
 
 /* ================================================================
    NEOFETCH

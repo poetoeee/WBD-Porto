@@ -186,16 +186,18 @@ const DATA = {
 
     skills: {
         Languages:            'C/C++, Java, Python, Go, JavaScript/TypeScript, SQL, PHP',
-        Frontend:             'Next.js, React, Three.js, JavaFX, Flet, Tailwind CSS, HTML/CSS',
-        'Backend/Databases':  'Node.js, PHP, Flask, Go, MySQL, SQLite',
-        Tools:                'Git, Docker, ROS, SolidWorks, Figma',
+        Frontend:             'React, Next.js, Three.js, Tailwind CSS, HTML/CSS',
+        'Backend/Databases':  'Node.js, Flask, MySQL, SQLite, PostgreSQL',
+        'AI/ML':              'Numpy, Scikit-Learn, Pandas, NLP, Computer Vision',
+        Tools:                'Git, Docker, Nginx, Linux, Figma',
     },
 
     social: [
-        { label: 'LinkedIn',  pad: 'LinkedIn  ', display: 'linkedin.com/in/muhammadedo',    url: 'https://linkedin.com/in/muhammadedo' },
-        { label: 'GitHub',    pad: 'GitHub    ', display: 'github.com/poetoeee',             url: 'https://github.com/poetoeee' },
-        { label: 'Instagram', pad: 'Instagram ', display: 'instagram.com/edoaprima',          url: 'https://www.instagram.com/edoaprima/' },
-        { label: 'Email',     pad: 'Email     ', display: 'muhammadedo017@gmail.com',         url: 'mailto:muhammadedo017@gmail.com' },
+        { label: 'LinkedIn',  pad: 'LinkedIn', display: 'linkedin.com/in/muhammadedo',    url: 'https://linkedin.com/in/muhammadedo' },
+        { label: 'GitHub',    pad: 'GitHub', display: 'github.com/poetoeee',             url: 'https://github.com/poetoeee' },
+        { label: 'Instagram', pad: 'Instagram', display: 'instagram.com/edoaprima',          url: 'https://www.instagram.com/edoaprima/' },
+        { label: 'Email',     pad: 'Email', display: 'muhammadedo017@gmail.com',         url: 'mailto:muhammadedo017@gmail.com' },
+        { label: 'University',  pad: 'University', display: '13523096@std.stei.itb.ac.id',         url: 'mailto:13523096@std.stei.itb.ac.id' },
     ],
 };
 
