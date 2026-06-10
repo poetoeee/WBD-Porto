@@ -7,386 +7,98 @@
     <link rel="icon" href="favicon.ico" type="image/ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input type="checkbox" id="theme-toggle" class="theme-toggle-input">
 
-    <div class="terminal-window">
+    <!-- ── SPLASH PAGE ─────────────────────────────────────────── -->
+    <div id="splash" class="splash">
+        <div class="splash-content">
+            <canvas id="robot-canvas" width="280" height="76" aria-hidden="true"></canvas>
+            <h1 class="splash-name">MUHAMMAD EDO RADUPUTU APRIMA</h1>
+            <p class="splash-sub">Informatics Engineering @ ITB</p>
+            <p class="splash-tagline">
+                <span id="splash-typewriter"></span><span class="splash-cursor">|</span>
+            </p>
+            <nav class="splash-links" aria-label="Social links">
+                <a href="https://github.com/poetoeee" target="_blank" rel="noopener noreferrer" class="splash-icon-btn" title="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://linkedin.com/in/muhammadedo" target="_blank" rel="noopener noreferrer" class="splash-icon-btn" title="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="mailto:muhammadedo017@gmail.com" class="splash-icon-btn" title="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </a>
+            </nav>
+            <button id="enter-terminal" class="enter-terminal-btn">&gt; ENTER TERMINAL _</button>
+        </div>
+    </div>
+
+    <!-- ── TERMINAL ────────────────────────────────────────────── -->
+    <div id="terminal-window" class="terminal-window" hidden>
         <header class="terminal-header">
             <div class="header-buttons">
-                <span class="button close"></span>
-                <span class="button minimize"></span>
-                <span class="button maximize"></span>
+                <span class="button close"    title="Close"></span>
+                <span class="button minimize" title="Minimize"></span>
+                <span class="button maximize" title="Maximize"></span>
             </div>
-            <p class="header-title">Muhammad Edo Raduputu Aprima -- 13523096</p>
+            <p class="header-title">Muhammad Edo Raduputu Aprima   </p>
         </header>
 
         <main id="terminal-body" class="terminal-body">
-
-            <section class="terminal-home">
-                <p class="line"><span class="prompt">edo@portfolio:~$</span> ls -a</p>
-                <div class="directory-list">
-                    <p class="line dir">drwxr-xr-x 2 user user 4096 Sep 12 14:01 <a href="#about">about/</a></p>
-                    <p class="line dir">drwxr-xr-x 2 user user 4096 Sep 12 12:15 <a href="#projects">projects/</a></p>
-                    <p class="line file">-rw-r--r-- 1 user user 8192 Sep 11 09:30 <a href="#experience">experience.log</a></p>
-                    <p class="line file">-rw-r--r-- 1 user user 2048 Sep 11 08:55 <a href="#skills">skills.json</a></p>
-                    <p class="line file">-rw-r--r-- 1 user user 1024 Sep 09 10:05 <a href="#social">social.txt</a></p>
-                    <p class="line file">-rw-r--r-- 1 user user 2048 Sep 09 10:00 <a href="#help">help.info</a></p>
-                    <p class="line file">-rwxr-xr-x 1 user user 1024 Sep 12 09:30 <a href="#themes">themes.sh</a></p>
-                </div>
-                 <p class="line home-prompt"><span class="prompt blinking-cursor">edo@portfolio:~$</span></p>
-            </section>
-
-            <section id="about" class="terminal-content">
-                <p class="line"><span class="prompt">edo@portfolio:~$</span> cd about/</p>
-                <p class="line">Hi Pips! I am Muhammad Edo Raduputu Aprima.</p>
-                <p class="line" style="animation-delay: 2s;">Currently a student at ITB, building my foundation in software engineering. I'm also exploring the intersections of AI and robotics, interested in how machines learn to perceive and act. Outside of engineering, I spend my time on the badminton court or with a camera in hand. Both teach me about strategy and perspective.</p>
-                <p class="line"><a href="#" class="back-link">cd ..</a></p>
-                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/about$</span></p>
-            </section>
-
-            <section id="projects" class="terminal-content">
-                <p class="line"><span class="prompt">edo@portfolio:~$</span> cd projects/</p>
-                <p class="line">Listing projects...</p>
-                <div class="directory-list">
-                    <p class="line file">-rw-r--r-- 1 user user 3128 Aug 2025 <a href="#project-1">3D-Catalog-Model-Viewer.md</a></p>
-                    <p class="line file">-rw-r--r-- 1 user user 4820 Jun 2025 <a href="#project-2">Applicant-Tracking-System.md</a></p>
-                    <p class="line file">-rw-r--r-- 1 user user 4610 May 2025 <a href="#project-3">Logistics-Management-System.md</a></p>
-                    <p class="line file">-rw-r--r-- 1 user user 3240 May 2025 <a href="#project-4">Rush-Hour-Puzzle-Solver.md</a></p>
-                    <p class="line file">-rw-r--r-- 1 user user 4250 Apr 2025 <a href="#project-5">Little-Alchemy-2-Solver.md</a></p>
-                    <p class="line file">-rw-r--r-- 1 user user 4780 Dec 2024 <a href="#project-6">Audio-and-Image-Retrieval.md</a></p>
-                    <p class="line file">-rw-r--r-- 1 user user 2950 Nov 2024 <a href="#project-7">Renovation-Tracker.md</a></p>
-                </div>
-                <p class="line"><a href="#" class="back-link">cd ..</a></p>
-                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
-            </section>
-
-            <section id="project-1" class="terminal-content project-detail">
-                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> cat ./3D-Catalog-Model-Viewer.md</p>
-                <div class="readme-content">
-                    <h2 class="readme-title">3D Catalog Model Viewer</h2>
-                    <p class="readme-desc">
-                        This project was built to address the need for an interactive and easy-to-use 3D model viewer and catalogs. It allows users to upload, view, and annotate models directly in the browser.
-                    </p>
-                    <h2 class="readme-subtitle">Key Features</h2>
-                    <ul class="readme-features">
-                        <li>Model catalog with auto thumbnail generation.</li>
-                        <li>Interactive controls: zoom, pan, and auto rotate.</li>
-                        <li>Working Tree as a hierarchical view of all object within 3D model.</li>
-                        <li>Toggle the visibility (hide/show) of each object.</li>
-                        <li>Complete annotation system with CRUD with drag and drob feature.</li>
-                        <li>Animation controls (play, pause, stop) for models with animations.</li>
-                        <li>Runtime mesh optimization for faster loading.</li>
-                    </ul>
-                    <h2 class="readme-subtitle">Tech Stack</h2>
-                    <div class="readme-tech-stack">
-                        <span class="tech-badge">PHP</span>
-                        <span class="tech-badge">Three.js</span>
-                        <span class="tech-badge">SQLite</span>
-                        <span class="tech-badge">JavaScript</span>
-                    </div>
-                    <h2 class="readme-subtitle">Links</h2>
-                    <div class="readme-links">
-                        <a href="https://github.com/itbdelaboprogramming/Mockup_Threejs_Php" target="_blank">[GitHub Repository]</a>
-                    </div>
-                </div>
-
-                <p class="line"><a href="#projects" class="back-link">exit()</a></p>
-                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
-            </section>
-            
-            <section id="project-2" class="terminal-content project-detail">
-                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> cat ./Applicant-Tracking-System.md</p>
-                <div class="readme-content">
-                    <h2 class="readme-title">Application Tracking System (ATS)</h2>
-                    <p class="readme-desc">
-                        A CV parsing engine in Python, implementing multiple algorithms for comprehensive analysis: KMP, Boyer-Moore, and Aho-Corasick for exact keyword matching, Levenshtein Distance for fuzzy matching, and Regex for structured information extraction.
-                    </p>
-                    <h2 class="readme-subtitle">Key Features</h2>
-                    <ul class="readme-features">
-                        <li>Exact keyword matching with KMP, Boyer-Moore, Aho-Corasick.</li>
-                        <li>Fuzzy matching using Levenshtein Distance.</li>
-                        <li>Structured info extraction with Regex.</li>
-                    </ul>
-                    <h2 class="readme-subtitle">Tech Stack</h2>
-                    <div class="readme-tech-stack">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Flet</span>
-                        <span class="tech-badge">Docker</span>
-                        <span class="tech-badge">MySQL</span>
-                    </div>
-                    <h2 class="readme-subtitle">Links</h2>
-                    <div class="readme-links">
-                        <a href="https://github.com/Fariz36/Tubes3_10Internship0Job" target="_blank">[GitHub Repository]</a>
-                    </div>
-                </div>
-                <p class="line"><a href="#projects" class="back-link">exit()</a></p>
-                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
-            </section>
-
-            <section id="project-3" class="terminal-content project-detail">
-                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> cat ./Logistics-Management-System.md</p>
-                <div class="readme-content">
-                    <h2 class="readme-title">Logistics Management System</h2>
-                    <p class="readme-desc">
-                        Logistics management application that allows delivery management and tracking of parcels by couriers. Grounding the design in SOLID principles and key Design Patterns (Factory, Singleton, Repository, Adapter) to ensure a modular and scalable codebase.
-                    </p>
-                    <h2 class="readme-subtitle">Key Features</h2>
-                    <ul class="readme-features">
-                        <li>Shipment management for courier.</li>
-                        <li>Courier management, shipment management, and parcell management for admin.</li>
-                        <li>Plugin that can be customized by user to display data analysis.</li>
-                        <li>CRUD for shipment, courier, and parcel management.</li>
-                    </ul>
-                    <h2 class="readme-subtitle">Tech Stack</h2>
-                    <div class="readme-tech-stack">
-                        <span class="tech-badge">Java</span>
-                        <span class="tech-badge">JavaFX</span>
-                        <span class="tech-badge">SOLID</span>
-                        <span class="tech-badge">Design Patterns</span>
-                    </div>
-                    <h2 class="readme-subtitle">Links</h2>
-                    <div class="readme-links">
-                        <a href="https://github.com/Labpro-21/if2010-tubes-2-2425-owo" target="_blank">[GitHub Repository]</a>
-                    </div>
-                </div>
-                <p class="line"><a href="#projects" class="back-link">exit()</a></p>
-                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
-            </section>
-
-            <section id="project-4" class="terminal-content project-detail">
-                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> cat ./Rush-Hour-Puzzle-Solver.md</p>
-                <div class="readme-content">
-                    <h2 class="readme-title">Rush Hour Puzzle Solver</h2>
-                    <p class="readme-desc">
-                        This program, developed in Java using the Swing toolkit for the GUI, implements various pathfinding algorithms to solve the Rush Hour puzzle. The core challenge is to maneuver a primary vehicle out of a gridlocked board through a designated exit point in the minimum number of moves.
-                    </p>
-                    <h2 class="readme-subtitle">Key Features</h2>
-                    <ul class="readme-features">
-                        <li>Implements uninformed search (UCS, IDS) and informed search (A*, IDA*) algorithms.</li>
-                        <li>Allows user to select different search strategies and heuristic functions.</li>
-                        <li>Features multiple heuristics like "Blocking Pieces" and "Manhattan Distance".</li>
-                    </ul>
-                    <h2 class="readme-subtitle">Tech Stack</h2>
-                    <div class="readme-tech-stack">
-                        <span class="tech-badge">Java</span>
-                        <span class="tech-badge">Swing</span>
-                    </div>
-                    <h2 class="readme-subtitle">Links</h2>
-                    <div class="readme-links">
-                        <a href="https://github.com/poetoeee/Tucil3_13523096" target="_blank">[GitHub Repository]</a>
-                    </div>
-                </div>
-                <p class="line"><a href="#projects" class="back-link">exit()</a></p>
-                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
-            </section>
-
-            <section id="project-5" class="terminal-content project-detail">
-                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> cat ./Little-Alchemy-2-Solver.md</p>
-                <div class="readme-content">
-                    <h2 class="readme-title">Little Alchemy 2 Solver</h2>
-                    <p class="readme-desc">
-                        A full-stack solver application, featuring a Go (Golang) backend that models the game’s recipes as a graph and executes BFS/DFS algorithms to find solution paths.
-                    </p>
-                    <h2 class="readme-subtitle">Key Features</h2>
-                    <ul class="readme-features">
-                        <li>Go backend with graph-based recipe modeling.</li>
-                        <li>Interactive Next.js frontend for user input (elements, amount recipes) and result display.</li>
-                        <li>Finds solutions using BFS/DFS algorithms.</li>
-                        <li>Full-stack architecture with a modern frontend.</li>
-                    </ul>
-                    <h2 class="readme-subtitle">Tech Stack</h2>
-                    <div class="readme-tech-stack">
-                        <span class="tech-badge">Next.js</span>
-                        <span class="tech-badge">Go</span>
-                        <span class="tech-badge">Docker</span>
-                    </div>
-                    <h2 class="readme-subtitle">Links</h2>
-                    <div class="readme-links">
-                        <a href="https://github.com/rafifrs/Tubes2_FE_SayMyName" target="_blank">[GitHub Repository (FE)]</a>
-                        <a href="https://github.com/Starath/Tubes2_BE_SayMyName" target="_blank">[GitHub Repository (BE)]</a>
-                    </div>
-                </div>
-                <p class="line"><a href="#projects" class="back-link">exit()</a></p>
-                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
-            </section>
-
-            <section id="project-6" class="terminal-content project-detail">
-                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> cat ./Audio-and-Image-Retrieval.md</p>
-                <div class="readme-content">
-                    <h2 class="readme-title">Audio and Image Retrieval</h2>
-                    <p class="readme-desc">
-                        A full-stack implementation of an audio and image retrieval system. The backend is built with Python and Flask, using Mido for MIDI processing and Pillow/SciPy for image analysis, all served via an API to a Next.js client.
-                    </p>
-                    <h2 class="readme-subtitle">Key Features</h2>
-                    <ul class="readme-features">
-                        <li>Users can input audio (MIDI) for audio retrieval system.</li>
-                        <li>Users can input image (png/jpg) for image retrieval system.</li>
-                        <li>Sorting output by similarity percentage.</li>
-                        <li>Uses Mido for MIDI and Pillow/SciPy for images.</li>
-                    </ul>
-                    <h2 class="readme-subtitle">Tech Stack</h2>
-                    <div class="readme-tech-stack">
-                        <span class="tech-badge">Next.js</span>
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Matplotlib</span>
-                    </div>
-                    <h2 class="readme-subtitle">Links</h2>
-                    <div class="readme-links">
-                        <a href="https://github.com/poetoeee/Algeo02-23024" target="_blank">[GitHub Repository]</a>
-                    </div>
-                </div>
-                <p class="line"><a href="#projects" class="back-link">exit()</a></p>
-                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
-            </section>
-
-            <section id="project-7" class="terminal-content project-detail">
-                <p class="line"><span class="prompt">edo@portfolio:~/projects$</span> cat ./Renovation-Tracker.md</p>
-                <div class="readme-content">
-                    <h2 class="readme-title">Renovation Tracker</h2>
-                    <p class="readme-desc">
-                        A project management desktop tool built with Python to simplify the process of tracking tasks, budgets, and timelines for home renovation projects.
-                    </p>
-                    <h2 class="readme-subtitle">Key Features</h2>
-                    <ul class="readme-features">
-                        <li>Project management with sort and filter feature by project status percentage.</li>
-                        <li>Task management with sort and filter feature by project status percentage.</li>
-                        <li>Budgets management for every task and project.</li>
-                        <li>CRUD for project management, task management, and budget management.</li>
-                        <li>CRUD for project inspiration page.</li>
-                    </ul>
-                    <h2 class="readme-subtitle">Tech Stack</h2>
-                    <div class="readme-tech-stack">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">TKinter</span>
-                        <span class="tech-badge">MySQL</span>
-                    </div>
-                    <h2 class="readme-subtitle">Links</h2>
-                    <div class="readme-links">
-                        <a href="https://github.com/poetoeee/IF2150-2024-K02-G09-Rebuilt" target="_blank">[GitHub Repository]</a>
-                    </div>
-                </div>
-                <p class="line"><a href="#projects" class="back-link">exit()</a></p>
-                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~/projects$</span></p>
-            </section>
-
-            <section id="experience" class="terminal-content">
-                <p class="line"><span class="prompt">edo@portfolio:~$</span> cat experience.log</p>
-                
-                <div class="log-entry">
-                    <p class="log-date">[Mar 2025 - Present]</p>
-                    <p class="log-title">> Research Software Engineer Intern</p>
-                    <p class="log-organization">Nakayama de Labo</p>
-                    <p class="log-desc"> - Designed and built a full-stack web application for a 3D model catalog with an interactive viewer using PHP and Three.js.</p>
-                    <p class="log-desc"> - Implemented core features such as a CRUD annotation system, object hierarchy panel, animation controls, and runtime mesh optimization.</p>
-                </div>
-                
-                <div class="log-entry">
-                    <p class="log-date">[Jan 2025 - Present]</p>
-                    <p class="log-title">> Head of Programming Divison Dago Hoogeschool Team </p>
-                    <p class="log-organization">Unit Robotika ITB</p>
-                    <p class="log-desc"> - Led the development of a humanoid soccer robot using ROS 2, architecting its motion control, computer vision pipeline, and autonomous decision-making modules.</p>
-                </div>
-
-                <div class="log-entry">
-                    <p class="log-date">[Jan 2025 - Present]</p>
-                    <p class="log-title">> Staff of Career Development</p>
-                    <p class="log-organization">Himpunan Mahasiswa Informatika (HMIF) ITB</p>
-                    <p class="log-desc"> - Authored insightful career-focused articles on Medium by interviewing alumni, reaching an audience of 200+ readers.</p>
-                    <p class="log-desc"> - Designed career mentoring events to connect students with experienced professionals and alumni.</p>
-                    
-                </div>
-
-                <div class="log-entry">
-                    <p class="log-date">[Apr 2024 - Apr 2025]</p>
-                    <p class="log-title">> Staff of Intracampus</p>
-                    <p class="log-organization">Unit Bulutangkis ITB</p>
-                    <p class="log-desc"> - Organized comparative studies with other student organizations in ITB to benchmark best practices and foster collaboration.</p>
-                    <p class="log-desc"> - Successfully planned and executed the annual Open House event to promote the organization and manage the recruitment of new members.</p>
-                    
-                </div>
-
-                <div class="log-entry">
-                    <p class="log-date">[Oct 2024 - Dec 2024]</p>
-                    <p class="log-title">> Computational Lab Practical Assistant</p>
-                    <p class="log-organization">Comlabs-USDI ITB</p>
-                    <p class="log-desc"> - Assisted and assessed over 50+ students as practicum assisstant for Computational Thinking 2024-2025 course
-                    
-                </div>
-
-                <div class="log-entry">
-                    <p class="log-date">[May 2024 - Dec 2024]</p>
-                    <p class="log-title">> Staff of Internal Control Unit</p>
-                    <p class="log-organization">GAMAIS ITB</p>
-                    <p class="log-desc"> - Coordinated and executed a series of technical and non-technical training programs for all divisions to enhance organizational capabilities.</p>
-                    
-                </div>
-
-                <p class="line"><a href="#" class="back-link">cd ..</a></p>
-                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~$</span></p>
-            </section>
-
-            <section id="skills" class="terminal-content">
-                <p class="line"><span class="prompt">edo@portfolio:~$</span> cat skills.json</p>
-                <div class="skills-list ">
-                    <p class="skill-category">Languages:</p>
-                    <p class="skills">  - C/C++, Java, Python, Go, JavaScript/TypeScript, SQL, PHP</p>
-
-                    <p class="skill-category">Frontend:</p>
-                    <p class="skills">  -  Next.js, React, Three.js, JavaFX, Flet, Tailwind CSS, HTML/CSS</p>
-
-                    <p class="skill-category">Backend & Databases:</p>
-                    <p class="skills">  - Node.js, PHP, Flask, Go, MySQL, SQLite</p>
-
-                    <p class="skill-category">Other:</p>
-                    <p class="skills">  - Git, Docker, ROS, Solidworks, Figma</p>
-                </div>
-                <p class="line"><a href="#" class="back-link">cd ..</a></p>
-                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~$</span></p>
-            </section>
-
-            <section id="social" class="terminal-content">
-                <p class="line"><span class="prompt">edo@portfolio:~$</span> cat social.txt</p>
-                <p class="line">Connecting to social networks...</p>
-                <ul class="contact-list">
-                    <li>[LinkedIn]  <a href="https://linkedin.com/in/muhammadedo" target="_blank">linkedin.com/in/muhammadedo</a></li>
-                    <li>[GitHub]    <a href="https://github.com/poetoeee" target="_blank">github.com/poetoeee</a></li>
-                    <li>[Instagram] <a href="https://www.instagram.com/edoaprima/" target="_blank">instagram.com/edoaprima</a></li>
-                    <li>[Email]     <a href="mailto:muhammadedo017@gmail.com">muhammadedo017@gmail.com</a></li>
-                </ul>
-                <p class="line"><a href="#" class="back-link">cd ..</a></p>
-                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~$</span></p>
-            </section>
-
-            <section id="help" class="terminal-content">
-                <p class="line"><span class="prompt">edo@portfolio:~$</span> cat help.info</p>
-                <p class="line">Available commands:</p>
-                <ul class="help-list">
-                    <li><a href="#about">about</a>      - Shows a brief introduction about me.</li>
-                    <li><a href="#projects">projects</a>   - Lists my main projects.</li>
-                    <li><a href="#experience">experience</a> - Displays my professional and organizational experience.</li>
-                    <li><a href="#skills">skills</a>     - Lists my technical skills and competencies.</li>
-                    <li><a href="#social">social</a>     - Displays my social media and contact links.</li>
-                    <li><a href="#themes">themes</a>     - Allows you to change the color theme.</li>
-                </ul>
-                 <p class="line"><a href="#" class="back-link">cd ..</a></p>
-                 <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~$</span></p>
-            </section>
-
-            <section id="themes" class="terminal-content">
-                <p class="line"><span class="prompt">edo@portfolio:~$</span> ./themes.sh</p>
-                <p class="line">Click the command below to toggle the theme.</p>
-                <div class="themes-list">
-                    <label for="theme-toggle" class="line theme-toggle-label">-rwxr-xr-x 1 user user 512 Sep 12 10:00 toggle-theme.sh</label>
-                </div>
-                <p class="line"><a href="#" class="back-link">cd ..</a></p>
-                <p class="line"><span class="prompt blinking-cursor">edo@portfolio:~$</span></p>
-            </section>
-
+            <div id="output"></div>
+            <div class="input-line" id="input-line">
+                <span class="prompt" id="prompt-display">edo@portfolio:~$</span>
+                <input
+                    type="text"
+                    id="terminal-input"
+                    autocomplete="off"
+                    spellcheck="false"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    aria-label="Terminal input"
+                >
+            </div>
         </main>
+
+        <nav class="mobile-commands" id="mobile-commands" aria-label="Quick commands">
+            <button onclick="runMobileCmd('ls')">ls</button>
+            <button onclick="runMobileCmd('cd ~')">~ home</button>
+            <button onclick="runMobileCmd('cd projects')">projects</button>
+            <button onclick="runMobileCmd('whoami')">whoami</button>
+            <button onclick="runMobileCmd('tree')">tree</button>
+            <button onclick="runMobileCmd('help')">help</button>
+            <button onclick="runMobileCmd('clear')">clear</button>
+        </nav>
     </div>
 
+    <!-- Hover Card Preview -->
+    <div id="hover-card" class="hover-card" hidden>
+        <div class="hc-img-wrap" id="hc-img-wrap">
+            <img id="hc-img" src="" alt="">
+        </div>
+        <p class="hc-title" id="hc-title"></p>
+        <p class="hc-desc"  id="hc-desc"></p>
+        <div class="hc-badges" id="hc-badges"></div>
+    </div>
+
+    <!-- Project Viewer Modal -->
+    <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" hidden>
+        <div id="modal-window" class="modal-window">
+            <div class="modal-titlebar" id="modal-titlebar">
+                <div class="modal-ctrl">
+                    <span class="modal-btn modal-close" id="modal-close-btn" title="Close (Esc)"></span>
+                    <span class="modal-btn modal-min"   title="Minimize"></span>
+                    <span class="modal-btn modal-max"   title="Maximize"></span>
+                </div>
+                <span class="modal-title" id="modal-title">project-viewer</span>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
