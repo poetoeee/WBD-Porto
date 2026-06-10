@@ -13,9 +13,133 @@ const DATA = {
 
     projects: [
         {
+            filename:    'Nimons360.md',
+            title:       'Nimons360',
+            date:        'Jun 2026',
+            type:        'Mobile',
+            size:        5340,
+            description: 'A Kotlin-native Android family safety app for real-time location sharing among family groups. Built across two milestones with interactive maps, live WebSocket presence, FCM push notifications, and offline-capable local storage.',
+            features: [
+                'Real-time location tracking on interactive map via WebSocket with live member presence.',
+                'Phone orientation indicator and battery/network status broadcast per member.',
+                'Long-press map to mark and annotate locations with photos; stored in SQLite + filesystem.',
+                'Background location sending to server when app is closed.',
+                'FCM push notifications: manual messages and time-based greetings (Good Morning, etc.).',
+                'Family management: create, join by code, leave, pin locally, and share via deep link.',
+                'Profile photo upload from camera or gallery; JWT token stored securely.',
+                'Responsive portrait & landscape layouts; OWASP Mobile security analysis and mitigations.',
+                'OpenAPI YAML specification for all REST API contracts.',
+            ],
+            tech:  ['Kotlin', 'Android', 'Jetpack Compose', 'WebSocket', 'Firebase FCM', 'Room/SQLite', 'Retrofit'],
+            links: [],
+        },
+        {
+            filename:    'CNN-RNN-LSTM-Image-Captioning.md',
+            title:       'CNN & RNN/LSTM From Scratch',
+            date:        'May 2026',
+            type:        'Desktop',
+            size:        4980,
+            description: 'A Python machine learning project implementing CNN and RNN/LSTM forward propagation from scratch using NumPy. Covers image classification with 16 CNN architecture experiments and an encoder-decoder image captioning pipeline using Flickr8k.',
+            features: [
+                'CNN forward propagation from scratch: Conv2D (shared), LocallyConnected2D (non-shared), pooling, flatten, and activation layers using NumPy only.',
+                'Image classification on Intel Image Classification dataset (~25k images, 6 classes) with macro F1-score evaluation.',
+                'Systematic hyperparameter study: number of conv layers, filter count, filter size, and pooling type (16 total architectures).',
+                'Pretrained CNN encoder (InceptionV3/VGG16, frozen) extracts feature vectors saved to disk for reuse.',
+                'SimpleRNN and LSTM cells from scratch with Keras weight loading for image captioning (Flickr8k, 8k images).',
+                'Pre-inject encoder-decoder architecture (Show and Tell, Vinyals et al. 2015) with teacher forcing training.',
+                '12 RNN/LSTM variants by layer depth and hidden state size; evaluated with BLEU-4 and METEOR scores.',
+                'Qualitative analysis: RNN vs LSTM caption comparison across 10+ images with ground truth.',
+            ],
+            tech:  ['Python', 'NumPy', 'TensorFlow', 'Keras', 'InceptionV3', 'PIL/Pillow'],
+            links: [],
+        },
+        {
+            filename:    'Feedforward-Neural-Network.md',
+            title:       'Feedforward Neural Network From Scratch',
+            date:        'Mar 2026',
+            type:        'Desktop',
+            size:        3860,
+            description: 'A Python FFNN module built entirely from scratch using NumPy, with full forward and backward propagation, batch training, multiple activation and loss functions, L1/L2 regularization, and weight/gradient distribution visualization.',
+            features: [
+                'Full forward and backward propagation from scratch with chain rule; batch input supported.',
+                'Configurable architecture: arbitrary layer depth, neuron widths, and per-layer activation functions.',
+                'Activation functions: Linear, ReLU, Sigmoid, tanh, Softmax.',
+                'Loss functions: MSE, Binary Cross-Entropy, and Categorical Cross-Entropy.',
+                'Weight initialization: zero, uniform random, and normal random (with seed for reproducibility).',
+                'L1 and L2 regularization; gradient descent weight update with configurable learning rate and epoch count.',
+                'Per-layer weight and gradient distribution visualization; save/load model to disk.',
+                'Hyperparameter experiments: depth/width, activation, learning rate, and regularization effects.',
+                'Benchmark comparison against scikit-learn MLPClassifier on Global Student Placement dataset.',
+            ],
+            tech:  ['Python', 'NumPy', 'scikit-learn', 'Matplotlib', 'Jupyter Notebook'],
+            links: [],
+        },
+        {
+            filename:    'Raft-Consensus-Protocol.md',
+            title:       'Raft Consensus Protocol',
+            date:        'Dec 2025',
+            type:        'Desktop',
+            size:        4410,
+            description: 'A distributed key-value store built on a full Raft consensus protocol implementation in TypeScript/Node.js. Supports multi-node clusters with automatic leader election, log replication, and dynamic membership change while maintaining CP system guarantees.',
+            features: [
+                'Full Raft consensus: periodic heartbeat, leader election, log replication, and membership change.',
+                'Distributed in-memory key-value store with commands: ping, get, set, strln, del, append.',
+                'Automatic leader election with randomized election timeout to resolve split-vote scenarios.',
+                'Log replication with majority quorum ACK (⌊N/2⌋ + 1 nodes) before committing entries.',
+                'Dynamic membership change: add and remove nodes from a live running cluster.',
+                'Client redirection: follower nodes return leader address; client retries directly.',
+                'Multi-threaded RPC communication per node; all node actions logged to terminal.',
+                'CP system guarantees: cluster rejects writes when quorum is unavailable.',
+            ],
+            tech:  ['TypeScript', 'Node.js', 'JSON-RPC', 'Docker'],
+            links: [],
+        },
+        {
+            filename:    'Nimonspedia.md',
+            title:       'Nimonspedia',
+            date:        'Dec 2025',
+            type:        'Web',
+            size:        6840,
+            description: 'Full-stack multi-role online marketplace built across two milestones for IF3110 Web Based Development. Milestone 1 delivers a pure PHP/HTML/CSS/JS e-commerce platform; Milestone 2 extends it with a React SPA, Node.js WebSocket server, and real-time auction, chat, and push notification features — all orchestrated by Nginx in Docker Compose.',
+            features: [
+                'Multi-role auth: buyer/seller via PHP session-based login; admin dashboard secured with JWT generated by the Node.js service.',
+                'Full e-commerce flow: product catalog with server-side search, filter, and pagination; persistent shopping cart; checkout with balance hold/deduction; order lifecycle (waiting_approval → approved → on_delivery → received).',
+                'Seller dashboard: CRUD product listings with soft delete, Quill.js rich-text descriptions, and binary-file storage for product images and store logos on the local filesystem.',
+                'Real-time auction (Socket.io WebSocket): live bid feed, 15-second inactivity countdown reset on each new bid, balance deduction on bid / refund on outbid, automatic order creation for the winner.',
+                'Real-time chat: text, image, and item-preview message types; typing indicators; read receipts; cursor-based pagination for a frequently-changing message feed.',
+                'Web Push Notifications: Service Worker + VAPID keys; push events for outbid, auction win, auction ending soon, new chat message, and order status changes; per-user subscription management.',
+                'Admin dashboard (React SPA): user listing and management, per-user and global feature flags (auction_enabled, chat_enabled, checkout_enabled) to toggle platform features at runtime.',
+                'Nginx reverse proxy routes PHP requests, Node.js API/WebSocket traffic, and React static assets; full stack deployed with Docker Compose (nginx + php-fpm + node + db services).',
+                'Load testing suite targeting high-traffic product-discovery endpoints.',
+            ],
+            tech:  ['PHP', 'HTML/CSS/JS', 'React', 'Node.js', 'Socket.io', 'MySQL', 'Nginx', 'Docker'],
+            links: [],
+        },
+        {
+            filename:    'mDBMS-Storage-Manager.md',
+            title:       'mini DBMS — Storage Manager',
+            date:        'Dec 2025',
+            type:        'Desktop',
+            size:        3750,
+            description: 'Storage Manager component of a collaborative mini relational DBMS (mDBMS) built in Python from scratch. Responsible for all disk I/O, block-based binary file storage, B+ Tree / Hash indexing, and statistical metadata that feeds the query optimizer.',
+            features: [
+                'Binary file storage engine: read_block(), write_block(), and delete_block() operating on fixed-size disk blocks.',
+                'Table and row serializer: converts schema definitions and tuples to/from binary layout with block allocation.',
+                'B+ Tree and/or Hash index per column via set_index(); consumed by the query optimizer and query processor.',
+                'get_stats() returns n_r, b_r, l_r, f_r, and V(A,r) per relation for cost-based query optimization.',
+                'Buffer pool for caching recently accessed blocks; dirty block flush on checkpoint signal.',
+                'Coordinates with Failure Recovery Manager component for dirty-write tracking.',
+                'Supports integer, float, char, and varchar data types with schema enforcement.',
+                'Database seeded with 3+ joinable tables (50+ rows each) for end-to-end integration across all five DBMS components.',
+            ],
+            tech:  ['Python', 'OOP', 'Binary File I/O', 'B+ Tree'],
+            links: [],
+        },
+        {
             filename:    '3D-Catalog-Model-Viewer.md',
             title:       '3D Catalog Model Viewer',
             date:        'Aug 2025',
+            type:        'Web',
             size:        3128,
             description: 'Built to address the need for an interactive and easy-to-use 3D model viewer and catalog. Allows users to upload, view, and annotate 3D models directly in the browser.',
             features: [
@@ -34,6 +158,7 @@ const DATA = {
             filename:    'Applicant-Tracking-System.md',
             title:       'Applicant Tracking System (ATS)',
             date:        'Jun 2025',
+            type:        'Desktop',
             size:        4820,
             description: 'A CV parsing engine in Python implementing multiple algorithms: KMP, Boyer-Moore, and Aho-Corasick for exact keyword matching, Levenshtein Distance for fuzzy matching, and Regex for structured information extraction.',
             features: [
@@ -48,6 +173,7 @@ const DATA = {
             filename:    'Logistics-Management-System.md',
             title:       'Logistics Management System',
             date:        'May 2025',
+            type:        'Desktop',
             size:        4610,
             description: 'Logistics management application grounded in SOLID principles and key Design Patterns (Factory, Singleton, Repository, Adapter) for a modular and scalable codebase.',
             features: [
@@ -63,6 +189,7 @@ const DATA = {
             filename:    'Rush-Hour-Puzzle-Solver.md',
             title:       'Rush Hour Puzzle Solver',
             date:        'May 2025',
+            type:        'Desktop',
             size:        3240,
             description: 'Implements various pathfinding algorithms to solve the Rush Hour puzzle — maneuver the primary vehicle out of a gridlocked board through the exit in minimum moves.',
             features: [
@@ -77,6 +204,7 @@ const DATA = {
             filename:    'Little-Alchemy-2-Solver.md',
             title:       'Little Alchemy 2 Solver',
             date:        'Apr 2025',
+            type:        'Website',
             size:        4250,
             description: 'Full-stack solver application with a Go backend modeling game recipes as a directed graph, executing BFS/DFS algorithms to find all solution paths.',
             features: [
@@ -95,6 +223,7 @@ const DATA = {
             filename:    'Audio-and-Image-Retrieval.md',
             title:       'Audio and Image Retrieval',
             date:        'Dec 2024',
+            type:        'Website',
             size:        4780,
             description: 'Full-stack retrieval system for audio (MIDI) and images. Python/Flask backend uses Mido for MIDI processing and Pillow/SciPy for image analysis, served via API to a Next.js client.',
             features: [
@@ -110,6 +239,7 @@ const DATA = {
             filename:    'Renovation-Tracker.md',
             title:       'Renovation Tracker',
             date:        'Nov 2024',
+            type:        'Desktop',
             size:        2950,
             description: 'A desktop project management tool built with Python to track tasks, budgets, and timelines for home renovation projects.',
             features: [
@@ -267,6 +397,10 @@ function renderModalContent(project) {
         `<a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer" class="modal-link-btn">[${esc(l.label)}]</a>`
     ).join('');
     const features = project.features.map(f => `<li>${esc(f)}</li>`).join('');
+    const year = project.date.split(' ').pop();
+    const typeBadge = project.type
+        ? `<span class="meta-badge meta-type">${esc(project.type)}</span>`
+        : '';
 
     // src intentionally empty — set by openModal after onerror is wired up
     return `
@@ -279,6 +413,9 @@ function renderModalContent(project) {
   </div>
 </div>
 <span class="readme-h1">${esc(project.title)}</span>
+<div class="project-meta" style="margin:5px 0 12px">
+  <span class="meta-badge meta-year">${esc(year)}</span>${typeBadge}
+</div>
 <span class="out-line readme-desc" style="margin-bottom:10px">${esc(project.description)}</span>
 <span class="readme-h2">Key Features</span>
 <ul class="readme-features" style="margin-bottom:10px">${features}</ul>

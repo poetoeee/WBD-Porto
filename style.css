@@ -511,6 +511,119 @@ body.light .modal-link-btn:hover { background: rgba(1, 132, 188, 0.08); }
 }
 
 /* ================================================================
+   MODAL — inverted from main theme
+   (dark theme → light modal, light theme → dark modal)
+   ================================================================ */
+
+/* dark theme → light modal */
+.modal-window {
+    background: #f0ece3;
+    border-color: rgba(158, 160, 164, 0.4);
+}
+.modal-titlebar {
+    background: #e4dfd5;
+    border-bottom-color: rgba(158, 160, 164, 0.4);
+}
+.modal-title { color: #9ea0a4; }
+.modal-body {
+    color: #383a42;
+    scrollbar-color: #9ea0a4 transparent;
+}
+.modal-body::-webkit-scrollbar-thumb { background: #9ea0a4; }
+.modal-screenshot {
+    border-color: rgba(158, 160, 164, 0.4);
+    background: #e4dfd5;
+}
+.modal-body .readme-h1,
+.modal-body .readme-h2 { color: #50a14f; }
+.modal-body .readme-h1::before,
+.modal-body .readme-h2::before { color: #9ea0a4; }
+.modal-body .readme-features li::before { color: #a626a4; }
+.modal-body .tech-badge {
+    background: rgba(90, 95, 122, 0.16);
+    color: #383a42;
+}
+.modal-link-btn {
+    color: #0184bc;
+    border-color: rgba(158, 160, 164, 0.4);
+}
+.modal-link-btn:hover {
+    background: rgba(1, 132, 188, 0.08);
+    border-color: #0184bc;
+}
+
+/* light theme → dark modal */
+body.light .modal-window {
+    background: #282a36;
+    border-color: rgba(98, 114, 164, 0.4);
+}
+body.light .modal-titlebar {
+    background: #21222c;
+    border-bottom-color: rgba(98, 114, 164, 0.4);
+}
+body.light .modal-title { color: #6272a4; }
+body.light .modal-body {
+    color: #f8f8f2;
+    scrollbar-color: #6272a4 transparent;
+}
+body.light .modal-body::-webkit-scrollbar-thumb { background: #6272a4; }
+body.light .modal-screenshot {
+    border-color: rgba(98, 114, 164, 0.4);
+    background: #21222c;
+}
+body.light .modal-body .readme-h1,
+body.light .modal-body .readme-h2 { color: #50fa7b; }
+body.light .modal-body .readme-h1::before,
+body.light .modal-body .readme-h2::before { color: #6272a4; }
+body.light .modal-body .readme-features li::before { color: #ff79c6; }
+body.light .modal-body .tech-badge {
+    background: rgba(98, 114, 164, 0.25);
+    color: #f8f8f2;
+}
+body.light .modal-link-btn {
+    color: #8be9fd;
+    border-color: rgba(98, 114, 164, 0.4);
+}
+body.light .modal-link-btn:hover {
+    background: rgba(139, 233, 253, 0.08);
+    border-color: #8be9fd;
+}
+
+/* Meta badges (year + type) — pill style, inside inverted modal */
+.meta-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-right: 6px;
+    letter-spacing: 0.03em;
+    border: 1px solid transparent;
+}
+/* dark theme → light modal: use light palette */
+.meta-year {
+    background: rgba(193, 132, 1, 0.12);
+    color: #c18401;
+    border-color: rgba(193, 132, 1, 0.28);
+}
+.meta-type {
+    background: rgba(166, 38, 164, 0.12);
+    color: #a626a4;
+    border-color: rgba(166, 38, 164, 0.28);
+}
+/* light theme → dark modal: use dark palette */
+body.light .meta-year {
+    background: rgba(255, 184, 108, 0.14);
+    color: #ffb86c;
+    border-color: rgba(255, 184, 108, 0.30);
+}
+body.light .meta-type {
+    background: rgba(255, 121, 198, 0.14);
+    color: #ff79c6;
+    border-color: rgba(255, 121, 198, 0.30);
+}
+
+/* ================================================================
    SPLASH PAGE
    ================================================================ */
 .splash {
