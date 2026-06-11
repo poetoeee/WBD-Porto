@@ -7,7 +7,7 @@ const DATA = {
     about: {
         name:       'Muhammad Edo Raduputu Aprima',
         nim:        '13523096',
-        university: 'Informatics Engineering, Institut Teknologi Bandung',
+        university: 'Computer Science, Institut Teknologi Bandung',
         bio: 'Hi Pips! I am Muhammad Edo Raduputu Aprima.\n\nCurrently a student at CS ITB, building my foundation in software engineering. I\'m also exploring the intersections of AI and robotics, interested in how machines learn to perceive and act.\n\nOutside of engineering, I spend my time on the badminton court or with a camera in hand. Both teach me about strategy and perspective.',
     },
 
@@ -740,9 +740,9 @@ function startTypewriter() {
     if (!el) return;
 
     const texts = [
-        'Building software at the intersection of AI & robotics.',
-        'CS @ ITB · Open to internship opportunities.',
-        'Code. Robots. Badminton. Camera.',
+        '3rd Year Computer Science student at ITB.',
+        'I write code, break things, and sometimes fix them.',
+        'Into software, AI/ML, robotics, and sometimes photography.',
     ];
 
     let ti = 0, ci = 0, del = false;
@@ -1068,25 +1068,24 @@ const NEOFETCH_ASCII = [
 
 function renderNeofetch() {
     const uptime = (() => {
-        const start = new Date('2022-08-01');
+        const start = new Date('2023-08-01');
         const now   = new Date();
         const months = (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
         const yrs = Math.floor(months / 12);
         const mos = months % 12;
-        return `${yrs}y ${mos}m (since Aug 2022)`;
+        return `${yrs}y ${mos}m (since Aug 2023)`;
     })();
 
     const info = [
         ['OS',        'Ubuntu 24.04 LTS x86_64'],
         ['Host',      'portfolio.sh'],
-        ['Kernel',    '6.8.0 — ITB Informatics, Batch \'22'],
+        ['Kernel',    '6.8.0 — ITB CS, Batch \'23'],
         ['Uptime',    uptime],
         ['Packages',  `${DATA.projects.length} (projects shipped)`],
         ['Shell',     'bash 5.2.0'],
         ['Languages', 'C/C++, Java, Python, Go, JavaScript, PHP'],
         ['Frontend',  'Next.js, React, Three.js'],
         ['Backend',   'Node.js, Flask, Go, PHP'],
-        ['Status',    'Open to internship opportunities ✓'],
     ];
 
     const infoRows = info.map(([k, v]) =>
