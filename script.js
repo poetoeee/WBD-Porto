@@ -276,7 +276,7 @@ const DATA = {
         ],
         organizations: [
             {
-                period: 'Jan 2025 – Present',
+                period: 'Jan 2025 – Dec 2025',
                 title:  'Head of Programming Division — Dago Hoogeschool Team',
                 org:    'Unit Robotika ITB',
                 desc: [
@@ -284,7 +284,7 @@ const DATA = {
                 ],
             },
             {
-                period: 'Jan 2025 – Present',
+                period: 'Jan 2025 – Apr 2026',
                 title:  'Staff of Career Development',
                 org:    'Himpunan Mahasiswa Informatika (HMIF) ITB',
                 desc: [
@@ -311,7 +311,40 @@ const DATA = {
             },
         ],
         volunteering: [],
-        awards: [],
+        awards: [
+            {
+                period: '2024',
+                title:  '2nd Winner',
+                org:    'Universitas Muhammadiyah Surakarta',
+                desc: [
+                    'National Competitive Programming Competition',
+                ],
+            },
+            {
+                period: '2024',
+                title:  '3rd Winner',
+                org:    'Universitas Amikom Yogyakarta',
+                desc: [
+                    'National Competitive Programming (CODE) Competition',
+                ],
+            },
+            {
+                period: '2025',
+                title:  'Top 100 (32nd) Global Leaderboard',
+                org:    'Mekari x Money Forward',
+                desc: [
+                    'Indonesia Young Coders League (IYCL) 2025',
+                ],
+            },
+            {
+                period: '2025',
+                title:  'Global Nominee & Best Innovation Award',
+                org:    'NASA',
+                desc: [
+                    'NASA Space Apps Challenge 2025 — Global Hackathon',
+                ],
+            },
+        ],
     },
 
     skills: {
