@@ -310,8 +310,10 @@ const DATA = {
                 ],
             },
         ],
-        volunteering: [],
-        awards: [
+        volunteering: [
+            
+        ],
+        achievements: [
             {
                 period: '2024',
                 title:  '2nd Winner',
@@ -402,8 +404,8 @@ const FS = {
         items: [
             { name: 'professional.log',  type: 'file', perms: '-rw-r--r--', size: 4096, date: 'Jun  7' },
             { name: 'organizations.log', type: 'file', perms: '-rw-r--r--', size: 6144, date: 'Jun  7' },
-            { name: 'volunteering.log',  type: 'file', perms: '-rw-r--r--', size:  512, date: 'Jun  7' },
-            { name: 'awards.log',        type: 'file', perms: '-rw-r--r--', size:  512, date: 'Jun  7' },
+            // { name: 'volunteering.log',  type: 'file', perms: '-rw-r--r--', size:  512, date: 'Jun  7' },
+            { name: 'achievements.log',  type: 'file', perms: '-rw-r--r--', size:  512, date: 'Jun  7' },
         ],
         hidden: [],
     },
@@ -1010,8 +1012,8 @@ function renderTree(showHeader = true) {
     const expFiles = [
         ['professional.log',  'cat experience/professional.log'],
         ['organizations.log', 'cat experience/organizations.log'],
-        ['volunteering.log',  'cat experience/volunteering.log'],
-        ['awards.log',        'cat experience/awards.log'],
+        // ['volunteering.log',  'cat experience/volunteering.log'],
+        ['achievements.log',        'cat experience/achievements.log'],
     ];
 
     const lines = [];
@@ -1237,8 +1239,8 @@ const COMMANDS = {
                 switch (file) {
                     case 'professional.log':  return renderExperience('professional');
                     case 'organizations.log': return renderExperience('organizations');
-                    case 'volunteering.log':  return renderExperience('volunteering');
-                    case 'awards.log':        return renderExperience('awards');
+                    // case 'volunteering.log':  return renderExperience('volunteering');
+                    case 'achievements.log':        return renderExperience('achievements');
                 }
             }
             return `<span class="out-line c-red">cat: ${esc(filename)}: No such file</span>`;
@@ -1259,8 +1261,8 @@ const COMMANDS = {
             switch (filename) {
                 case 'professional.log':  return renderExperience('professional');
                 case 'organizations.log': return renderExperience('organizations');
-                case 'volunteering.log':  return renderExperience('volunteering');
-                case 'awards.log':        return renderExperience('awards');
+                // case 'volunteering.log':  return renderExperience('volunteering');
+                case 'achievements.log':        return renderExperience('achievements');
                 default: return `<span class="out-line c-red">cat: ${esc(filename)}: No such file</span>`;
             }
         }
